@@ -1,0 +1,33 @@
+service: serverless-Geospatial-Platform
+
+provider:
+  name: aws
+  runtime: nodejs12.x
+  memorySize: 256
+  timeout: 30
+  region: us-east-1
+
+package:
+  exclude:
+    - README.md
+    - package.json
+    - package-lock.json
+
+functions:
+  handler:
+    handler: handler.getAll
+    events:
+      - http:
+          method: GET
+          path: /geosearch
+          integration: lambda
+          request:
+            parameters:
+              paths:
+                ip: true
+            template:
+              application/json: '{}'
+          response:
+            headers:
+              Content-Type: "'application/json'"
+            template: $input.json('$')

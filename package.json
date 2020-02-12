@@ -1,0 +1,23 @@
+{
+  "name": "serverless-Geospatial",
+  "version": "1.0.0",
+  "description": "An api that allows queries against s3 buckets.",
+  "main": "handler.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1 ",
+    "deploy": "sls deploy"
+  },
+  "keywords": [
+    "serverless",
+    "geoip"
+  ],
+  "author": "Bassam Sadi",
+  "dependencies": {
+    "mmdb-reader": "^1.1.0"
+  },
+  "devDependencies": {
+    "athena-express": "^5.1.1",
+    "aws-sdk": "^2.615.0",
+    "serverless": "^1.24.0"
+  }
+}
