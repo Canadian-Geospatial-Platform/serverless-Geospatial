@@ -1,0 +1,2 @@
+# serverless-Geospatial
+sls deploy
